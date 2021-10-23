@@ -16,3 +16,13 @@ Resources:
       Tags:
       - Key: Name
         Value: IBM-IGW 
+        
+        AttachGateway: # Attach Internet Gateway - IBM VPC
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      VpcId:
+         Ref: VPC
+      InternetGatewayId:
+         Ref: InternetGateway
+
+
