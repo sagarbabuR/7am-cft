@@ -9,3 +9,10 @@ Resources:
       Tags:
        - Key: Name
          Value: IBM
+         
+          InternetGateway: # IBM Internet Gateway
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+      - Key: Name
+        Value: IBM-IGW 
