@@ -86,6 +86,14 @@ Resources:
         Ref: PubSubnet1
       RouteTableId:
         Ref: PublicRouteTable
+        
+         PvtSubnetRouteTableAssociation: # Pvt Sub Association
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId:
+        Ref: PvtSubnet1
+      RouteTableId:
+        Ref: PrivateRouteTable
 
   
 
