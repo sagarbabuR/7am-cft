@@ -24,5 +24,17 @@ Resources:
          Ref: VPC
       InternetGatewayId:
          Ref: InternetGateway
+         
+         PubSubnet1: # Public Subnet
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId:
+        Ref: VPC
+      CidrBlock: 10.0.0.0/24
+      AvailabilityZone: "us-east-1a"
+      MapPublicIpOnLaunch: 'true'
+      Tags:
+      - Key: Name
+        Value: IBM-Pub-SUBNET1
 
 
