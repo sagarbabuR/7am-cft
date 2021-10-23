@@ -36,5 +36,19 @@ Resources:
       Tags:
       - Key: Name
         Value: IBM-Pub-SUBNET1
+        
+        
+
+  PvtSubnet1: # Private Subnet
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId:
+        Ref: VPC
+      CidrBlock: 10.0.1.0/24
+      AvailabilityZone: "us-east-1b"
+      MapPublicIpOnLaunch: 'false'
+      Tags:
+      - Key: Name
+        Value: IBM-Pvt-Subnet1
 
 
