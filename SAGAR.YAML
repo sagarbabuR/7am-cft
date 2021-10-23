@@ -50,5 +50,14 @@ Resources:
       Tags:
       - Key: Name
         Value: IBM-Pvt-Subnet1
+        
+        PublicRouteTable: # Public Route Table
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId:  
+        Ref: VPC
+      Tags:
+      - Key: Name
+        Value: IBM-Pub-RT
 
 
